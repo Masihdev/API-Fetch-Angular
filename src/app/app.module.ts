@@ -5,18 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { PokemonComponent } from './pokemon/pokemon.component';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    PokemonComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent, HeaderComponent, PokemonComponent],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
