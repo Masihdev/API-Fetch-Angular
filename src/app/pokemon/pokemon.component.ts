@@ -7,6 +7,9 @@ import { PokApiDataService } from '../services/pok-api-data.service';
 })
 export class PokemonComponent implements OnInit {
   pokemons: any[] = [];
+  page = 1;
+  allPokemons: number = 0;
+
   constructor(public service: PokApiDataService) {}
 
   ngOnInit(): void {
@@ -14,8 +17,10 @@ export class PokemonComponent implements OnInit {
   }
 
   showConfig() {
-    this.service.loadPokemonsData().subscribe((api: any) => {
+    this.service.loadPokemonsData(8, this.page + 0).subscribe((api: any) => {
+      this.allPokemons = api.count;
       // console.log(api);
+
       api.results.forEach((result: any) => {
         this.service
           .loadMorePoksData(result.name)

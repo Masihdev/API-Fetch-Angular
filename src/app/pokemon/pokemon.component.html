@@ -1,5 +1,12 @@
 <div class="pok-container">
-  <div class="pok-card" *ngFor="let pokemon of pokemons">
+  <div
+    class="pok-card"
+    *ngFor="
+      let pokemon of pokemons
+        | paginate
+          : { itemsPerPage: 8, currentPage: page, totalItems: allPokemons }
+    "
+  >
     <img [src]="pokemon.sprites.front_default" alt="Pokemon" />
     <h3>{{ pokemon.name }}</h3>
     <h4>{{ pokemon.id }}</h4>
@@ -10,3 +17,7 @@
     </div>
   </div>
 </div>
+
+<pagination-controls
+  (pageChange)="page = $event; pokemons = []; showConfig()"
+></pagination-controls>

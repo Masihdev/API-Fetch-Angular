@@ -7,8 +7,10 @@ import { HttpClient } from '@angular/common/http';
 export class PokApiDataService {
   constructor(private http: HttpClient) {}
 
-  loadPokemonsData() {
-    return this.http.get(`https://pokeapi.co/api/v2/pokemon?limit=10`);
+  loadPokemonsData(limit: number, offset: number) {
+    return this.http.get(
+      `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`
+    );
   }
 
   loadMorePoksData(name: string) {
