@@ -6,7 +6,7 @@ import { PokApiDataService } from '../services/pok-api-data.service';
   styleUrls: ['./pokemon.component.scss'],
 })
 export class PokemonComponent implements OnInit {
-  pokemon: any[] = [];
+  pokemons: any[] = [];
   constructor(public service: PokApiDataService) {}
 
   ngOnInit(): void {
@@ -14,10 +14,16 @@ export class PokemonComponent implements OnInit {
   }
 
   showConfig() {
-    this.service.loadPokemons().subscribe((api: any) => {
+    this.service.loadPokemonsData().subscribe((api: any) => {
       // console.log(api);
-      this.pokemon.push(api);
-      console.log('pokemon JSON is', this.pokemon);
+      api.results.forEach((result: any) => {
+        this.service
+          .loadMorePoksData(result.name)
+          .subscribe((apiUnique: any) => {
+            this.pokemons.push(apiUnique);
+            console.log('pokemon JSON is', this.pokemons);
+          });
+      });
     });
   }
 }

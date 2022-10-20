@@ -1,0 +1,15 @@
+.pok-container {
+  background-color: red;
+  height: calc(100vh - 140.48px);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.pok-card {
+  width: 300px;
+  height: 400px;
+  background-color: pink;
+  margin: 10px 10px;
+}
