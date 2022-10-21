@@ -1,6 +1,6 @@
 .pok-container {
   background-color: red;
-  height: calc(100vh - 140.48px);
+  height: calc(100vh - 200px);
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -12,6 +12,18 @@
   height: 300px;
   background-color: pink;
   margin: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    width: 100px;
+    height: auto;
+  }
+  h3,
+  h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 pagination-controls {
   text-align: center;

@@ -8,7 +8,8 @@ import { PokApiDataService } from '../services/pok-api-data.service';
 export class PokemonComponent implements OnInit {
   pokemons: any[] = [];
   page = 1;
-  allPokemons: number = 0;
+  allPokemons: number;
+  numbers: number;
 
   constructor(public service: PokApiDataService) {}
 
