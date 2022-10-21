@@ -1,20 +1,21 @@
 .pok-container {
-  background-color: red;
-  height: calc(100vh - 200px);
+  background-color: rgb(241, 209, 209);
+  height: calc(100vh - 110px);
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   padding: 20px;
+  overflow-y: auto;
 }
 
 .pok-card {
   width: 300px;
-  height: 300px;
-  background-color: pink;
+  height: 400px;
   margin: 10px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-y: auto;
   img {
     width: 100px;
     height: auto;

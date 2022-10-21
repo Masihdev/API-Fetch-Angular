@@ -9,7 +9,6 @@ export class PokemonComponent implements OnInit {
   pokemons: any[] = [];
   page = 1;
   allPokemons: number;
-  numbers: number;
 
   constructor(public service: PokApiDataService) {}
 
@@ -21,6 +20,7 @@ export class PokemonComponent implements OnInit {
     this.service.loadPokemonsData(8, this.page + 0).subscribe((api: any) => {
       this.allPokemons = api.count;
       // console.log(api);
+      console.log('totalNum', this.allPokemons);
 
       api.results.forEach((result: any) => {
         this.service

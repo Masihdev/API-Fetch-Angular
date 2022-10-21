@@ -1,7 +1,16 @@
 .header {
-  background-color: green;
+  // background-color: green;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+}
+
+.example-form {
+  display: flex;
+  align-items: center;
+  // background-color: red;
+  button {
+    margin-left: 5px;
+  }
 }

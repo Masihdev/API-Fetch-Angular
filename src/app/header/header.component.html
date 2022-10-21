@@ -1,7 +1,17 @@
-<div class="header">
+<!-- <div class="header"> -->
+<mat-toolbar class="header">
   <h1>Pokedex API</h1>
-  <div>
-    <input type="text" placeholder="Search by name or ID" />
-    <button>search</button>
-  </div>
-</div>
+  <form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <input matInput placeholder="Search by name or ID" />
+    </mat-form-field>
+    <button
+      mat-mini-fab
+      color="primary"
+      aria-label="Example icon button with a menu icon"
+    >
+      <mat-icon>search</mat-icon>
+    </button>
+  </form>
+  <!-- </div> -->
+</mat-toolbar>

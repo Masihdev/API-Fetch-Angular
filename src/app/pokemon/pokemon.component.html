@@ -1,11 +1,10 @@
-<div class="pok-container">
-  <div
+<mat-toolbar class="pok-container">
+  <mat-card
     class="pok-card"
     *ngFor="
       let pokemon of pokemons
         | paginate
-          : { itemsPerPage: 8, currentPage: page, totalItems: allPokemons };
-      index as i
+          : { itemsPerPage: 8, currentPage: page, totalItems: allPokemons }
     "
   >
     <img
@@ -64,8 +63,8 @@
         </td>
       </tr>
     </table>
-  </div>
-</div>
+  </mat-card>
+</mat-toolbar>
 
 <pagination-controls
   (pageChange)="page = $event; pokemons = []; showConfig()"
