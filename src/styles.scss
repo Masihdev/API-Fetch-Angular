@@ -4,5 +4,29 @@ body {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(215, 214, 214, 0.2);
+  background: rgb(233, 229, 229);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(124, 100, 100);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(189, 142, 150);
+}

@@ -1,6 +1,6 @@
 .pok-container {
   background-color: rgb(241, 209, 209);
-  height: calc(100vh - 110px);
+  height: calc(100vh - 170px);
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -20,12 +20,21 @@
     width: 100px;
     height: auto;
   }
-  h3,
-  h4 {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
 }
 pagination-controls {
   text-align: center;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table,
+td {
+  border-bottom: 1px solid;
+}
+
+// .pok-card::-webkit-scrollbar {
+//   display: none;
+// }

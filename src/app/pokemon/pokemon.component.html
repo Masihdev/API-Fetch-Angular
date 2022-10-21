@@ -11,55 +11,56 @@
       [src]="pokemon['sprites']['other']['dream_world']['front_default']"
       alt="Pokemon"
     />
-    <h3>{{ pokemon["name"] }}</h3>
-    <h4>{{ pokemon["id"] }}</h4>
+    <h1>{{ pokemon["name"] }}</h1>
+    <h4><b>ID#</b>{{ pokemon["id"] }}</h4>
+
     <table>
       <tr>
         <td>
-          <span>{{ pokemon["stats"][0]["stat"]["name"] }}</span>
+          {{ pokemon["stats"][0]["stat"]["name"] }}
         </td>
         <td>
-          <span>{{ pokemon["stats"][0]["base_stat"] }}</span>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <span>{{ pokemon["stats"][1]["stat"]["name"] }}</span>
-        </td>
-        <td>
-          <span>{{ pokemon["stats"][1]["base_stat"] }}</span>
+          {{ pokemon["stats"][0]["base_stat"] }}
         </td>
       </tr>
       <tr>
         <td>
-          <span>{{ pokemon["stats"][2]["stat"]["name"] }}</span>
+          {{ pokemon["stats"][1]["stat"]["name"] }}
         </td>
         <td>
-          <span>{{ pokemon["stats"][2]["base_stat"] }}</span>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <span>{{ pokemon["stats"][3]["stat"]["name"] }}</span>
-        </td>
-        <td>
-          <span>{{ pokemon["stats"][3]["base_stat"] }}</span>
+          {{ pokemon["stats"][1]["base_stat"] }}
         </td>
       </tr>
       <tr>
         <td>
-          <span>{{ pokemon["stats"][4]["stat"]["name"] }}</span>
+          {{ pokemon["stats"][2]["stat"]["name"] }}
         </td>
         <td>
-          <span>{{ pokemon["stats"][4]["base_stat"] }}</span>
+          {{ pokemon["stats"][2]["base_stat"] }}
         </td>
       </tr>
       <tr>
         <td>
-          <span>{{ pokemon["stats"][5]["stat"]["name"] }}</span>
+          {{ pokemon["stats"][3]["stat"]["name"] }}
         </td>
         <td>
-          <span>{{ pokemon["stats"][5]["base_stat"] }}</span>
+          {{ pokemon["stats"][3]["base_stat"] }}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          {{ pokemon["stats"][4]["stat"]["name"] }}
+        </td>
+        <td>
+          {{ pokemon["stats"][4]["base_stat"] }}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          {{ pokemon["stats"][5]["stat"]["name"] }}
+        </td>
+        <td>
+          {{ pokemon["stats"][5]["base_stat"] }}
         </td>
       </tr>
     </table>
