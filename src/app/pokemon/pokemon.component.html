@@ -12,7 +12,7 @@
       alt="Pokemon"
     />
     <h1>{{ pokemon["name"] }}</h1>
-    <h4><b>ID#</b>{{ pokemon["id"] }}</h4>
+    <h4><b>#0</b>{{ pokemon["id"] }}</h4>
 
     <table>
       <tr>
@@ -64,6 +64,14 @@
         </td>
       </tr>
     </table>
+    <mat-card class="moves-container">
+      <h1>Moves</h1>
+      <div class="moves">
+        <span *ngFor="let test of pokemon.moves; let k = index">{{
+          test["move"]["name"]
+        }}</span>
+      </div>
+    </mat-card>
   </mat-card>
 </mat-toolbar>
 

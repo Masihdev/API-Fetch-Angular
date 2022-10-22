@@ -1,5 +1,5 @@
 .pok-container {
-  background-color: rgb(241, 209, 209);
+  background-color: rgba(65, 83, 97, 0.484);
   height: calc(100vh - 170px);
   display: flex;
   justify-content: center;
@@ -38,3 +38,30 @@ td {
 // .pok-card::-webkit-scrollbar {
 //   display: none;
 // }
+.moves-container {
+  text-align: center;
+  margin-top: 16px;
+
+  h1 {
+    background-color: rgba(65, 83, 97, 0.484);
+    border-radius: 100px;
+    padding: 3px;
+    border: 2px solid pink;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+}
+.moves {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  span {
+    border-radius: 100px;
+    padding: 3px;
+    border: 2px solid rgba(65, 83, 97, 0.484);
+    margin: 3px;
+    height: fit-content;
+    font-size: 12px;
+  }
+}
