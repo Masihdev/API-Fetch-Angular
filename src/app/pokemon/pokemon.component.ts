@@ -9,7 +9,7 @@ export class PokemonComponent implements OnInit {
   pokemons: any[] = [];
   page = 1;
   allPokemons: number;
-
+  // userName: any;
   constructor(public service: PokApiDataService) {}
 
   ngOnInit(): void {
@@ -32,4 +32,8 @@ export class PokemonComponent implements OnInit {
       });
     });
   }
+
+  // nameValue(name: any) {
+  //   this.userName = name;
+  // }
 }

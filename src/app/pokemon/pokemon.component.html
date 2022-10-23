@@ -1,3 +1,27 @@
+<mat-toolbar class="header">
+  <h1>Pokedex API</h1>
+  <form class="example-form">
+    <!-- <mat-form-field class="example-full-width"> -->
+    <input
+      class="form-control"
+      list="datalistOptions"
+      id="exampleDataList"
+      placeholder="Type to search..."
+    />
+    <datalist id="datalistOptions">
+      <option *ngFor="let pokemon of pokemons" [value]="pokemon.name"></option>
+    </datalist>
+    <!-- </mat-form-field> -->
+    <button
+      mat-mini-fab
+      color="primary"
+      aria-label="Example icon button with a menu icon"
+    >
+      <mat-icon>search</mat-icon>
+    </button>
+  </form>
+</mat-toolbar>
+
 <mat-toolbar class="pok-container">
   <mat-card
     class="pok-card"
