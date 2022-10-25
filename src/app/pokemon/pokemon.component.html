@@ -9,14 +9,13 @@
       placeholder="Type to search..."
     />
     <datalist id="datalistOptions">
-      <option *ngFor="let pokemon of pokemons" [value]="pokemon.name"></option>
+      <option
+        *ngFor="let pokemon of pokemons"
+        [value]="pokemon['name']"
+      ></option>
     </datalist>
     <!-- </mat-form-field> -->
-    <button
-      mat-mini-fab
-      color="primary"
-      aria-label="Example icon button with a menu icon"
-    >
+    <button mat-mini-fab color="primary">
       <mat-icon>search</mat-icon>
     </button>
   </form>
@@ -91,8 +90,8 @@
     <mat-card class="moves-container">
       <h1>Moves</h1>
       <div class="moves">
-        <span *ngFor="let test of pokemon.moves; let k = index">{{
-          test["move"]["name"]
+        <span *ngFor="let pokMove of pokemon['moves']; let k = index">{{
+          pokMove["move"]["name"]
         }}</span>
       </div>
     </mat-card>
